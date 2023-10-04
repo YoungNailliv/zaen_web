@@ -1,0 +1,67 @@
+header{
+    width: 100%;
+    opacity: 80%;
+    @include flex(row,wrap,space-between,center);
+    nav{
+        @include flex(row,wrap,space-between,center );
+        background-color: $color_principal;
+        width: 100%;
+        position: relative;
+        
+        .toggle_navbar{
+            display: none;
+            position: absolute;
+            width: 100%;
+            
+            li {
+                list-style: none;
+                padding: 10px;
+                padding-bottom: 15px;
+                width: 96%;
+                text-align: center;
+                border: 1px solid white;
+                margin: 5px;
+                animation-duration: 0,2s;
+                &:hover{
+                    filter: brightness(75%);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $font_color_principal;
+                    font-family: $main_font;
+
+                }
+            }
+        }
+        label {
+            position: absolute;
+            right: 10px;
+            width: 45px;
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
+
+#toggle {
+    display:none;
+}
+
+
+#toggle:checked ~.toggle_navbar {
+    background-color: $color_principal;
+    @include flex(column,wrap,space-between,center);
+    top: 84px;
+}
+
+.logo_navbar {
+    img{
+        width: 80px;
+    }
+}
+
+.toogle_navbar {
+    display: none;
+}

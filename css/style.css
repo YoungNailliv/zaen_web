@@ -1,7 +1,76 @@
+/*** UTILITIES ***/
+/*** BASE***/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
+html {
+  background-color: grey; }
+
+/***LAYOUT***/
+header {
+  width: 100%;
+  opacity: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    position: relative; }
+    header nav .toggle_navbar {
+      display: none;
+      position: absolute;
+      width: 100%; }
+      header nav .toggle_navbar li {
+        list-style: none;
+        padding: 10px;
+        padding-bottom: 15px;
+        width: 96%;
+        text-align: center;
+        border: 1px solid white;
+        margin: 5px;
+        animation-duration: 0,2s; }
+        header nav .toggle_navbar li:hover {
+          filter: brightness(75%); }
+        header nav .toggle_navbar li a {
+          text-decoration: none;
+          color: white;
+          font-family: "Roboto", sans-serif; }
+    header nav label {
+      position: absolute;
+      right: 10px;
+      width: 45px; }
+      header nav label img {
+        width: 40px; }
+
+#toggle {
+  display: none; }
+
+#toggle:checked ~ .toggle_navbar {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  top: 84px; }
+
+.logo_navbar img {
+  width: 80px; }
+
+.toogle_navbar {
+  display: none; }
+
+/***COMPONENTS***/
+/***MEDIA***/
 
 /*# sourceMappingURL=style.css.map */
