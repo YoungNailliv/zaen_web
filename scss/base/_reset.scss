@@ -6,4 +6,15 @@
 
 html {
     background-color: grey;
+    font-family: $main_font;
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr;
+    height: 100%;
 }

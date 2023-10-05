@@ -1,12 +1,12 @@
 header{
     width: 100%;
-    opacity: 80%;
     @include flex(row,wrap,space-between,center);
     nav{
         @include flex(row,wrap,space-between,center );
         background-color: $color_principal;
         width: 100%;
-        position: relative;
+        position: sticky;
+        z-index: 45;
         
         .toggle_navbar{
             display: none;
@@ -17,13 +17,14 @@ header{
                 list-style: none;
                 padding: 10px;
                 padding-bottom: 15px;
-                width: 96%;
+                width: 85%;
                 text-align: center;
                 border: 1px solid white;
                 margin: 5px;
-                animation-duration: 0,2s;
+                transition-duration: 0.2s;
                 &:hover{
                     filter: brightness(75%);
+                    transform: scale(1.1);
                 }
 
                 a {
@@ -54,6 +55,8 @@ header{
     background-color: $color_principal;
     @include flex(column,wrap,space-between,center);
     top: 84px;
+    z-index: 1;
+    
 }
 
 .logo_navbar {
