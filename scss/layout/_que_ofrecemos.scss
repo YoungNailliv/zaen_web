@@ -1,0 +1,55 @@
+.que_ofrecemos{
+    @include flex(row,wrap,center,center);
+    gap: 5px;
+    background-image: url(https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+    background-size: cover;
+    
+}
+
+.card_ofrecemos {
+    @include flex(row,wrap,center,start);
+    max-width: 350px;
+    background-color: white;
+    height: 500px;
+    border-radius: 40px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    img{
+        max-width: 100%;
+        border-radius: 2px;
+        
+    }
+
+}
+
+.texto_ofrecemos {
+    @include flex(row,wrap,center,center);
+    width: 80%;
+    gap: 15px;
+    
+    h2{
+        font-size: 20px;
+        color: $font_color_secundario;
+        opacity: 95%;
+        width: 95%;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin-bottom: 10px;
+        border: 2px solid $color_principal;
+        padding: 15px;
+        border-radius: 20px;
+        transition-duration: 0.2s;
+        &:hover{
+            background-color: rgba(190, 190, 190, 0.272);
+            opacity: 90%;
+        }
+
+    }
+    
+    
+}
